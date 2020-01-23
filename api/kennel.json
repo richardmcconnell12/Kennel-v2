@@ -1,0 +1,40 @@
+{
+  "animals": [
+    { "id": 1, "name": "Bleu", "breed": "Husky Mix" },
+    { "id": 2, "name": "Sookie", "breed": "Alaskan Husky" },
+    { "id": 3, "name": "Bazinga", "breed": "Pug Mix" }
+  ],
+
+  "employees": [
+    { "id": 1, "name": "Joseph Driscoll", "position": "Application Developer" },
+    { "id": 2, "name": "Ricky McConnell", "position": "Lead Vet" },
+    { "id": 3, "name": "Joel Venable", "position": "CEO" }
+  ],
+
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "123 Demonbreun",
+      "city": "Nashville, TN"
+    },
+    {
+      "id": 2,
+      "name": "Ricky McConnell",
+      "address": "6253 Main St.",
+      "city": "Nashville, TN"
+    },
+    {
+      "id": 3,
+      "name": "Joel Venable",
+      "address": "907 Front Ave.",
+      "city": "Nashville, TN"
+    }
+  ],
+
+  "owners": [
+    { "id": 1, "name": "Sean", "phone": "(615)-651-8060" },
+    { "id": 2, "name": "Jimmy", "phone": "(615)-701-4365" },
+    { "id": 3, "name": "Josh", "phone": "(615)-999-1240" }
+  ]
+}
