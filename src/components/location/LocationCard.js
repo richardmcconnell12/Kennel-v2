@@ -11,6 +11,12 @@ class LocationCard extends Component {
           <p>
             Address: {this.props.location.address} {this.props.location.city}
           </p>
+          <button
+            type="button"
+            onClick={() => this.props.deleteLocation(this.props.location.id)}
+          >
+            Close
+          </button>
         </div>
       </div>
     );

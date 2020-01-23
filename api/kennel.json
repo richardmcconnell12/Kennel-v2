@@ -36,12 +36,6 @@
       "name": "Nashville East",
       "address": "907 Front Ave.",
       "city": "Nashville, TN"
-    },
-    {
-      "id": 4,
-      "name": "Nashville South",
-      "address": "505 Interstate Blvd",
-      "city": "Nashville, TN"
     }
   ],
   "owners": [
@@ -54,11 +48,6 @@
       "id": 2,
       "name": "Jimmy",
       "phoneNumber": "(615)-701-4365"
-    },
-    {
-      "id": 3,
-      "name": "Josh",
-      "phoneNumber": "(615)-999-1240"
     }
   ]
 }

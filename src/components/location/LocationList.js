@@ -8,6 +8,16 @@ class LocationList extends Component {
     locations: []
   };
 
+  deleteLocation = id => {
+    LocationManager.delete(id).then(() => {
+      LocationManager.getAll().then(newLocations => {
+        this.setState({
+          locations: newLocations
+        });
+      });
+    });
+  };
+
   componentDidMount() {
     LocationManager.getAll().then(locations => {
       this.setState({
@@ -20,7 +30,11 @@ class LocationList extends Component {
     return (
       <div className="container-cards">
         {this.state.locations.map(location => (
-          <LocationCard key={location.id} location={location} />
+          <LocationCard
+            key={location.id}
+            location={location}
+            deleteLocation={this.deleteLocation}
+          />
         ))}
       </div>
     );
