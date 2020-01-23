@@ -9,7 +9,6 @@ class LocationList extends Component {
   };
 
   componentDidMount() {
-    console.log("LOCATIONS LIST: ComponentDidMount");
     LocationManager.getAll().then(locations => {
       this.setState({
         locations: locations
@@ -18,12 +17,10 @@ class LocationList extends Component {
   }
 
   render() {
-    console.log("LOCATIONS LIST: Render");
-
     return (
       <div className="container-cards">
         {this.state.locations.map(location => (
-          <LocationCard />
+          <LocationCard key={location.id} location={location} />
         ))}
       </div>
     );

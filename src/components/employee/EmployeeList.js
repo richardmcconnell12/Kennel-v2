@@ -9,7 +9,6 @@ class EmployeeList extends Component {
   };
 
   componentDidMount() {
-    console.log("EMPLOYEES LIST: ComponentDidMount");
     EmployeeManager.getAll().then(employees => {
       this.setState({
         employees: employees
@@ -18,12 +17,10 @@ class EmployeeList extends Component {
   }
 
   render() {
-    console.log("EMPLOYEES LIST: Render");
-
     return (
       <div className="container-cards">
         {this.state.employees.map(employee => (
-          <EmployeeCard />
+          <EmployeeCard key={employee.id} employee={employee} />
         ))}
       </div>
     );

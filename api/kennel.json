@@ -8,7 +8,7 @@
   "employees": [
     { "id": 1, "name": "Joseph Driscoll", "position": "Application Developer" },
     { "id": 2, "name": "Ricky McConnell", "position": "Lead Vet" },
-    { "id": 3, "name": "Joel Venable", "position": "CEO" }
+    { "id": 3, "name": "Joel Venable", "position": "Vet Assistant" }
   ],
 
   "locations": [
@@ -20,21 +20,27 @@
     },
     {
       "id": 2,
-      "name": "Ricky McConnell",
+      "name": "Nashville West",
       "address": "6253 Main St.",
       "city": "Nashville, TN"
     },
     {
       "id": 3,
-      "name": "Joel Venable",
+      "name": "Nashville East",
       "address": "907 Front Ave.",
+      "city": "Nashville, TN"
+    },
+    {
+      "id": 4,
+      "name": "Nashville South",
+      "address": "505 Interstate Blvd",
       "city": "Nashville, TN"
     }
   ],
 
   "owners": [
-    { "id": 1, "name": "Sean", "phone": "(615)-651-8060" },
-    { "id": 2, "name": "Jimmy", "phone": "(615)-701-4365" },
-    { "id": 3, "name": "Josh", "phone": "(615)-999-1240" }
+    { "id": 1, "name": "Sean", "phoneNumber": "(615)-651-8060" },
+    { "id": 2, "name": "Jimmy", "phoneNumber": "(615)-701-4365" },
+    { "id": 3, "name": "Josh", "phoneNumber": "(615)-999-1240" }
   ]
 }

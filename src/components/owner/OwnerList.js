@@ -9,7 +9,6 @@ class OwnerList extends Component {
   };
 
   componentDidMount() {
-    console.log("OWNER LIST: ComponentDidMount");
     OwnerManager.getAll().then(owners => {
       this.setState({
         owners: owners
@@ -18,12 +17,10 @@ class OwnerList extends Component {
   }
 
   render() {
-    console.log("OWNER LIST: Render");
-
     return (
       <div className="container-cards">
         {this.state.owners.map(owner => (
-          <OwnerCard />
+          <OwnerCard key={owner.id} owner={owner} />
         ))}
       </div>
     );
