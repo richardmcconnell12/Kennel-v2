@@ -6,9 +6,10 @@ class OwnerCard extends Component {
       <div className="card">
         <div className="card-content">
           <h3>
-            Name: <span className="card-ownerName">Rob McElhenney</span>
+            Name:{" "}
+            <span className="card-ownerName">{this.props.owner.name}</span>
           </h3>
-          <p>Phone: 615-534-6070</p>
+          <p>Phone: {this.props.owner.phoneNumber}</p>
         </div>
       </div>
     );

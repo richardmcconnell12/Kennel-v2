@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Animal.css";
 
 class AnimalCard extends Component {
   render() {
@@ -9,9 +10,9 @@ class AnimalCard extends Component {
             <img src={require("./dog.svg")} alt="My Puppers" />
           </picture>
           <h3>
-            Name: <span className="card-petname">Bleu</span>
+            Name: <span className="card-petname">{this.props.animal.name}</span>
           </h3>
-          <p>Breed: Husky Mix</p>
+          <p>{this.props.animal.breed}</p>
         </div>
       </div>
     );
