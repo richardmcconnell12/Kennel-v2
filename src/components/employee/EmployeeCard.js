@@ -12,6 +12,12 @@ class EmployeeCard extends Component {
             </span>
           </h3>
           <p>Position: {this.props.employee.position}</p>
+          <button
+            type="button"
+            onClick={() => this.props.deleteEmployee(this.props.employee.id)}
+          >
+            Fire!
+          </button>
         </div>
       </div>
     );

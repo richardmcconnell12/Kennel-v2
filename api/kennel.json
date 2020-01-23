@@ -1,16 +1,23 @@
 {
   "animals": [
-    { "id": 1, "name": "Bleu", "breed": "Husky Mix" },
-    { "id": 2, "name": "Sookie", "breed": "Alaskan Husky" },
-    { "id": 3, "name": "Bazinga", "breed": "Pug Mix" }
+    {
+      "id": 1,
+      "name": "Bleu",
+      "breed": "Husky Mix"
+    }
   ],
-
   "employees": [
-    { "id": 1, "name": "Joseph Driscoll", "position": "Application Developer" },
-    { "id": 2, "name": "Ricky McConnell", "position": "Lead Vet" },
-    { "id": 3, "name": "Joel Venable", "position": "Vet Assistant" }
+    {
+      "id": 1,
+      "name": "Joseph Driscoll",
+      "position": "Application Developer"
+    },
+    {
+      "id": 2,
+      "name": "Ricky McConnell",
+      "position": "Lead Vet"
+    }
   ],
-
   "locations": [
     {
       "id": 1,
@@ -37,10 +44,21 @@
       "city": "Nashville, TN"
     }
   ],
-
   "owners": [
-    { "id": 1, "name": "Sean", "phoneNumber": "(615)-651-8060" },
-    { "id": 2, "name": "Jimmy", "phoneNumber": "(615)-701-4365" },
-    { "id": 3, "name": "Josh", "phoneNumber": "(615)-999-1240" }
+    {
+      "id": 1,
+      "name": "Sean",
+      "phoneNumber": "(615)-651-8060"
+    },
+    {
+      "id": 2,
+      "name": "Jimmy",
+      "phoneNumber": "(615)-701-4365"
+    },
+    {
+      "id": 3,
+      "name": "Josh",
+      "phoneNumber": "(615)-999-1240"
+    }
   ]
 }
