@@ -1,4 +1,4 @@
-import { Route, withRouter, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
@@ -11,6 +11,10 @@ import AnimalForm from "./animal/AnimalForm";
 import EmployeeForm from "./employee/EmployeeForm";
 import OwnerForm from "./owner/OwnerForm";
 import LocationForm from "./location/LocationForm";
+import AnimalEditForm from "./animal/AnimalEditForm";
+import EmployeeEditForm from "./employee/EmployeeEditForm";
+import LocationEditForm from "./location/LocationEditForm";
+import OwnerEditForm from "./owner/OwnerEditForm";
 import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
@@ -46,6 +50,7 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
+          exact
           path="/animals/:animalId(\d+)"
           render={props => {
             // Pass the animalId to the AnimalDetailComponent
@@ -55,6 +60,12 @@ class ApplicationViews extends Component {
                 {...props}
               />
             );
+          }}
+        />
+        <Route
+          path="/animals/:animalId(\d+)/edit"
+          render={props => {
+            return <AnimalEditForm {...props} />;
           }}
         />
         <Route
@@ -75,6 +86,13 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
+          path="/locations/:locationId(\d+)/edit"
+          render={props => {
+            return <LocationEditForm {...props} />;
+          }}
+        />
+        <Route
+          exact
           path="/locations/:locationId(\d+)"
           render={props => {
             return (
@@ -83,6 +101,12 @@ class ApplicationViews extends Component {
                 {...props}
               />
             );
+          }}
+        />
+        <Route
+          path="/employees/:employeeId(\d+)/edit"
+          render={props => {
+            return <EmployeeEditForm {...props} />;
           }}
         />
         <Route
@@ -117,6 +141,12 @@ class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          path="/owners/:ownerId(\d+)/edit"
+          render={props => {
+            return <OwnerEditForm {...props} />;
           }}
         />
       </>
