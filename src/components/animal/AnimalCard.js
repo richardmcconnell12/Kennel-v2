@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Animal.css";
 
 class AnimalCard extends Component {
@@ -19,6 +20,9 @@ class AnimalCard extends Component {
           >
             Discharge
           </button>
+          <Link to={`/animals/${this.props.animal.id}`}>
+            <button>Details</button>
+          </Link>
         </div>
       </div>
     );
