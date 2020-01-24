@@ -9,6 +9,16 @@
       "id": 2,
       "name": "Sookie",
       "breed": "Husky "
+    },
+    {
+      "name": "Ruger",
+      "breed": "German Shepherd",
+      "id": 3
+    },
+    {
+      "name": "Buster",
+      "breed": "Blood Hound",
+      "id": 4
     }
   ],
   "employees": [
@@ -21,6 +31,11 @@
       "id": 2,
       "name": "Ricky McConnell",
       "position": "Lead Vet"
+    },
+    {
+      "name": "Joel Vanable",
+      "position": "Vet Assistant",
+      "id": 3
     }
   ],
   "locations": [
@@ -35,6 +50,12 @@
       "name": "Nashville East",
       "address": "907 Front Ave.",
       "city": "Nashville, TN"
+    },
+    {
+      "name": "Nashville West",
+      "address": "464 Charlotte Ave.",
+      "city": "Nashville, TN",
+      "id": 4
     }
   ],
   "owners": [
@@ -47,6 +68,11 @@
       "id": 2,
       "name": "Jimmy",
       "phoneNumber": "(615)-701-4365"
+    },
+    {
+      "name": "Bryan",
+      "phoneNumber": "(615)-867-5309",
+      "id": 3
     }
   ]
 }
