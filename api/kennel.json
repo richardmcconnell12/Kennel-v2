@@ -4,6 +4,11 @@
       "id": 1,
       "name": "Bleu",
       "breed": "Husky Mix"
+    },
+    {
+      "id": 2,
+      "name": "Sookie",
+      "breed": "Husky "
     }
   ],
   "employees": [
@@ -23,12 +28,6 @@
       "id": 1,
       "name": "Nashville North",
       "address": "123 Demonbreun",
-      "city": "Nashville, TN"
-    },
-    {
-      "id": 2,
-      "name": "Nashville West",
-      "address": "6253 Main St.",
       "city": "Nashville, TN"
     },
     {

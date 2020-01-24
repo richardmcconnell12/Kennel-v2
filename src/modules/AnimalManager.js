@@ -10,7 +10,7 @@ export default {
   },
 
   delete(id) {
-    return fetch(`http://${remoteURL}/animals/${id}`, {
+    return fetch(`${remoteURL}/animals/${id}`, {
       method: "DELETE"
     }).then(result => result.json());
   }
