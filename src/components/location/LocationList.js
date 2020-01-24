@@ -46,6 +46,7 @@ class LocationList extends Component {
               key={location.id}
               location={location}
               deleteLocation={this.deleteLocation}
+              {...this.props}
             />
           ))}
         </div>

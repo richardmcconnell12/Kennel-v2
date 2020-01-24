@@ -11,9 +11,9 @@
       "breed": "Husky "
     },
     {
-      "name": "Ruger",
-      "breed": "German Shepherd",
-      "id": 3
+      "id": 3,
+      "name": "Bazinga",
+      "breed": "Pug Mix"
     },
     {
       "name": "Buster",
@@ -33,9 +33,9 @@
       "position": "Lead Vet"
     },
     {
-      "name": "Joel Vanable",
-      "position": "Vet Assistant",
-      "id": 3
+      "id": 3,
+      "name": "Steve Brownlee",
+      "position": "Vet Assistant"
     }
   ],
   "locations": [
@@ -56,6 +56,12 @@
       "address": "464 Charlotte Ave.",
       "city": "Nashville, TN",
       "id": 4
+    },
+    {
+      "name": "Nashville South",
+      "address": "405 Interstate Blvd.",
+      "city": "Nashville, TN",
+      "id": 5
     }
   ],
   "owners": [
@@ -66,7 +72,7 @@
     },
     {
       "id": 2,
-      "name": "Jimmy",
+      "name": "Russel",
       "phoneNumber": "(615)-701-4365"
     },
     {
