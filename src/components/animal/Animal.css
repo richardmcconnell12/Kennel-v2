@@ -8,6 +8,14 @@
   flex: 0 1 24%;
 }
 
+.section-content {
+  text-align: center;
+}
+
+.container-cards {
+  margin: 1.5em;
+}
+
 .card-content {
   padding: 0.5em;
 }
