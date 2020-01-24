@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./Location.css";
 
 class LocationCard extends Component {
   render() {
@@ -17,6 +19,9 @@ class LocationCard extends Component {
           >
             Close
           </button>
+          <Link to={`/locations/${this.props.location.id}`}>
+            <button>Details</button>
+          </Link>
         </div>
       </div>
     );

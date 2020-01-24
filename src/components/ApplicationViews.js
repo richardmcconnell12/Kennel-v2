@@ -2,8 +2,9 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
-import AnimalDetail from "../components/animal/AnimalDetail";
+import AnimalDetail from "./animal/AnimalDetail";
 import LocationList from "./location/LocationList";
+import LocationDetail from "./location/LocationDetail";
 import EmployeeList from "./employee/EmployeeList";
 import OwnerList from "./owner/OwnerList";
 
@@ -36,9 +37,20 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
+          exact
           path="/locations"
           render={props => {
             return <LocationList />;
+          }}
+        />
+        <Route
+          path="/locations/:locationId(\d+)"
+          render={props => {
+            return (
+              <LocationDetail
+                locationId={parseInt(props.match.params.locationId)}
+              />
+            );
           }}
         />
         <Route
