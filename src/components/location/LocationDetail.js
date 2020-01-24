@@ -5,7 +5,16 @@ class LocationDetail extends Component {
   state = {
     name: "",
     address: "",
-    city: ""
+    city: "",
+    loadingStatus: true
+  };
+
+  handleDelete = () => {
+    //invoke the delete function in LocationManger and re-direct to the location list.
+    this.setState({ loadingStatus: true });
+    LocationManager.delete(this.props.locationId).then(() =>
+      this.props.history.push("/locations")
+    );
   };
 
   componentDidMount() {
@@ -14,7 +23,8 @@ class LocationDetail extends Component {
       this.setState({
         name: location.name,
         address: location.address,
-        city: location.city
+        city: location.city,
+        loadingStatus: false
       });
     });
   }
@@ -30,6 +40,13 @@ class LocationDetail extends Component {
           <p>
             Address: {this.state.address} {this.state.city}
           </p>
+          <button
+            type="button"
+            disabled={this.state.loadingStatus}
+            onClick={this.handleDelete}
+          >
+            Close
+          </button>
         </div>
       </div>
     );
