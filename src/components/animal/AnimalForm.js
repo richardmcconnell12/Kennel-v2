@@ -7,7 +7,8 @@ class AnimalForm extends Component {
   state = {
     animalName: "",
     breed: "",
-    employeeId: "",
+    employeeId: null,
+    employees: [],
     loadingStatus: false
   };
 
@@ -36,7 +37,7 @@ class AnimalForm extends Component {
       const animal = {
         name: this.state.animalName,
         breed: this.state.breed,
-        employeeId: this.state.employeeId
+        employeeId: parseInt(this.state.employeeId)
       };
 
       // Create the animal and redirect user to animal list
@@ -78,12 +79,11 @@ class AnimalForm extends Component {
                 value={this.employeeId}
               >
                 <option value="">Select an employee</option>
-                {this.props.employees &&
-                  this.props.employees.map(e => (
-                    <option key={e.id} id={e.id} value={e.id}>
-                      {e.name}
-                    </option>
-                  ))}
+                {this.state.employees.map(e => (
+                  <option key={e.id} id={e.id} value={e.id}>
+                    {e.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="alignRight">
