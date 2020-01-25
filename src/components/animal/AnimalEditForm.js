@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AnimalManager from "../../modules/AnimalManager";
+import EmployeeManager from "../../modules/EmployeeManager";
 import "./AnimalForm.css";
 
 class AnimalEditForm extends Component {
@@ -8,6 +9,7 @@ class AnimalEditForm extends Component {
     animalName: "",
     breed: "",
     employeeId: "",
+    employees: [],
     loadingStatus: true
   };
 
@@ -36,6 +38,7 @@ class AnimalEditForm extends Component {
   };
 
   componentDidMount() {
+    EmployeeManager.getAll().then(employees => this.setState({ employees }));
     AnimalManager.get(this.props.match.params.animalId).then(animal => {
       this.setState({
         animalName: animal.name,
@@ -82,13 +85,11 @@ class AnimalEditForm extends Component {
                 value={this.state.employeeId}
               >
                 <option value="">Select an employee</option>
-                {console.log("emp", this.props.employees)}
-                {this.props.employees &&
-                  this.props.employees.map(e => (
-                    <option key={e.id} id={e.id} value={e.id}>
-                      {e.name}
-                    </option>
-                  ))}
+                {this.state.employees.map(e => (
+                  <option key={e.id} id={e.id} value={e.id}>
+                    {e.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="alignRight">
