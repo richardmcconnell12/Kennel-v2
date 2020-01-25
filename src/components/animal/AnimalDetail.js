@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AnimalManager from "../../modules/AnimalManager";
+import "./AnimalDetail.css";
 
 class AnimalDetail extends Component {
   state = {
