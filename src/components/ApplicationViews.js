@@ -16,6 +16,7 @@ import EmployeeEditForm from "./employee/EmployeeEditForm";
 import LocationEditForm from "./location/LocationEditForm";
 import OwnerEditForm from "./owner/OwnerEditForm";
 import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
+import LocationWithEmployees from "./location/LocationWithEmployees";
 import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
@@ -84,6 +85,12 @@ class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          path="/locations/:locationId(\d+)/details"
+          render={props => {
+            return <LocationWithEmployees {...props} />;
           }}
         />
         <Route

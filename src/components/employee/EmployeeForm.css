@@ -60,3 +60,9 @@ fieldset button {
 fieldset .alignRight {
   text-align: right;
 }
+
+#locationId {
+  margin-top: 5px;
+  margin-left: 45px;
+  justify-content: center;
+}

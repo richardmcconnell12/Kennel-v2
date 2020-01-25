@@ -9,6 +9,12 @@ export default {
     return fetch(`${remoteURL}/locations`).then(result => result.json());
   },
 
+  getWithEmployees(id) {
+    return fetch(`${remoteURL}/locations/${id}?_embed=employees`).then(result =>
+      result.json()
+    );
+  },
+
   post(newLocation) {
     return fetch(`${remoteURL}/locations`, {
       method: "POST",
