@@ -86,12 +86,6 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
-          path="/locations/:locationId(\d+)/edit"
-          render={props => {
-            return <LocationEditForm {...props} />;
-          }}
-        />
-        <Route
           exact
           path="/locations/:locationId(\d+)"
           render={props => {
@@ -101,6 +95,12 @@ class ApplicationViews extends Component {
                 {...props}
               />
             );
+          }}
+        />
+        <Route
+          path="/locations/:locationId(\d+)/edit"
+          render={props => {
+            return <LocationEditForm {...props} />;
           }}
         />
         <Route
