@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import AnimalManager from "../../modules/AnimalManager";
+import EmployeeManager from "../../modules/EmployeeManager";
 import "./AnimalForm.css";
 
 class AnimalForm extends Component {
   state = {
     animalName: "",
     breed: "",
+    employeeId: "",
     loadingStatus: false
   };
+
+  componentDidMount() {
+    EmployeeManager.getAll().then(employees => this.setState({ employees }));
+  }
 
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -19,13 +25,18 @@ class AnimalForm extends Component {
    */
   constructNewAnimal = evt => {
     evt.preventDefault();
-    if (this.state.animalName === "" || this.state.breed === "") {
-      window.alert("Please input an animal name and breed");
+    if (
+      this.state.animalName === "" ||
+      this.state.breed === "" ||
+      this.state.employeeId === ""
+    ) {
+      window.alert("Please input an animal name, breed, and caretaker");
     } else {
       this.setState({ loadingStatus: true });
       const animal = {
         name: this.state.animalName,
-        breed: this.state.breed
+        breed: this.state.breed,
+        employeeId: this.state.employeeId
       };
 
       // Create the animal and redirect user to animal list
@@ -57,6 +68,23 @@ class AnimalForm extends Component {
                 placeholder="Breed"
               />
               <label htmlFor="breed">Breed</label>
+            </div>
+            <div className="form-group">
+              <label htmlFor="employee">Assign to caretaker</label>
+              <select
+                name="employee"
+                onChange={this.handleFieldChange}
+                id="employeeId"
+                value={this.employeeId}
+              >
+                <option value="">Select an employee</option>
+                {this.props.employees &&
+                  this.props.employees.map(e => (
+                    <option key={e.id} id={e.id} value={e.id}>
+                      {e.name}
+                    </option>
+                  ))}
+              </select>
             </div>
             <div className="alignRight">
               <button

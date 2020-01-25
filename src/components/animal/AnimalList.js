@@ -43,10 +43,10 @@ class AnimalList extends Component {
         <div className="container-cards">
           {this.state.animals.map(animal => (
             <AnimalCard
+              {...this.props}
               key={animal.id}
               animal={animal}
               deleteAnimal={this.deleteAnimal}
-              {...this.props}
             />
           ))}
         </div>

@@ -47,6 +47,7 @@ class AnimalEditForm extends Component {
   }
 
   render() {
+    console.log("eeeeee", this.props.employeeId);
     return (
       <>
         <form>
@@ -81,6 +82,7 @@ class AnimalEditForm extends Component {
                 value={this.state.employeeId}
               >
                 <option value="">Select an employee</option>
+                {console.log("emp", this.props.employees)}
                 {this.props.employees &&
                   this.props.employees.map(e => (
                     <option key={e.id} id={e.id} value={e.id}>
