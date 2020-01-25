@@ -19,6 +19,16 @@ class LocationCard extends Component {
             type="button"
             onClick={() => {
               this.props.history.push(
+                `/locations/${this.props.location.id}/details`
+              );
+            }}
+          >
+            Details
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              this.props.history.push(
                 `/locations/${this.props.location.id}/edit`
               );
             }}

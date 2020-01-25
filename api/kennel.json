@@ -35,17 +35,26 @@
     {
       "id": 1,
       "name": "Joseph Driscoll",
-      "position": "Vet Assistant"
+      "position": "Vet Assistant",
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Ricky McConnell",
-      "position": "Lead Vet"
+      "position": "Lead Vet",
+      "locationId": 3
     },
     {
       "id": 3,
       "name": "Steve Brownlee",
-      "position": "Vet Assistant"
+      "position": "Vet Assistant",
+      "locationId": 2
+    },
+    {
+      "name": "Deep Patel",
+      "position": "Vet",
+      "locationId": 4,
+      "id": 4
     }
   ],
   "locations": [
