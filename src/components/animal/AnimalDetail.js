@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AnimalManager from "../../modules/AnimalManager";
+import "./AnimalDetail.css";
 
 class AnimalDetail extends Component {
   state = {
@@ -40,6 +41,12 @@ class AnimalDetail extends Component {
             <span style={{ color: "darkslategrey" }}>{this.state.name}</span>
           </h3>
           <p>Breed: {this.state.breed}</p>
+          <p>
+            Caretaker:
+            {this.props.employees
+              .filter(employee => employee.id === this.props.animal.employeeId)
+              .map(emply => emply.name)}
+          </p>
           <button
             type="button"
             disabled={this.state.loadingStatus}

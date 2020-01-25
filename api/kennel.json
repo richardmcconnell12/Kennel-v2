@@ -3,21 +3,25 @@
     {
       "id": 1,
       "name": "Bleu",
-      "breed": "Husky Mix"
+      "breed": "Husky Mix",
+      "employeeId": 2
     },
     {
       "id": 2,
       "name": "Sookie",
-      "breed": "Husky "
+      "breed": "Husky ",
+      "employeeId": 3
     },
     {
       "id": 3,
       "name": "Bazinga",
-      "breed": "Pug Mix"
+      "breed": "Pug Mix",
+      "employeeId": 1
     },
     {
       "name": "Buster",
       "breed": "Blood Hound",
+      "employeeId": 2,
       "id": 4
     }
   ],
@@ -25,7 +29,7 @@
     {
       "id": 1,
       "name": "Joseph Driscoll",
-      "position": "Application Developer"
+      "position": "Vet Assistant"
     },
     {
       "id": 2,

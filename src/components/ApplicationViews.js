@@ -15,6 +15,7 @@ import AnimalEditForm from "./animal/AnimalEditForm";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
 import LocationEditForm from "./location/LocationEditForm";
 import OwnerEditForm from "./owner/OwnerEditForm";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
 import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
@@ -124,6 +125,12 @@ class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          path="/employees/:employeeId(\d+)/details"
+          render={props => {
+            return <EmployeeWithAnimals {...props} />;
           }}
         />
         <Route

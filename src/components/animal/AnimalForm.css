@@ -60,3 +60,9 @@ fieldset button {
 fieldset .alignRight {
   text-align: right;
 }
+
+#employeeId {
+  margin-top: 5px;
+  margin-left: 45px;
+  justify-content: center;
+}
