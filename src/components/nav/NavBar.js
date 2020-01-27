@@ -10,6 +10,11 @@ class NavBar extends Component {
           Furever Friends
           <br />
           <small>"Loving care when you're not there."</small>
+          <li>
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
+          </li>
         </h1>
         <nav>
           <ul className="container">
@@ -18,26 +23,20 @@ class NavBar extends Component {
                 Home
               </Link>
             </li>
-            <li>
-              <Link className="nav-link" to="/animals">
-                Animals
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/locations">
-                Locations
-              </Link>
-            </li>
+            {this.props.user ? (
+              <li>
+                <Link className="nav-link" to="/animals">
+                  Animals
+                </Link>
+              </li>
+            ) : null}
+            <li>Locations</li>
             <li>
               <Link className="nav-link" to="/employees">
                 Employees
               </Link>
             </li>
-            <li>
-              <Link className="nav-link" to="/owners">
-                Owners
-              </Link>
-            </li>
+            <li>Owners</li>:{" "}
           </ul>
         </nav>
       </header>

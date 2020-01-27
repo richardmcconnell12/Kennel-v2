@@ -20,13 +20,15 @@ import LocationWithEmployees from "./location/LocationWithEmployees";
 import Login from "./auth/Login";
 
 class ApplicationViews extends Component {
-  // Check if credentials are in local storage
-  //returns true/false
-  isAuthenticated = () => localStorage.getItem("credentials") !== null;
   render() {
     return (
       <>
-        <Route path="/login" component={Login} />
+        <Route
+          path="/login"
+          render={props => {
+            return <Login setUser={this.props.setUser} {...props} />;
+          }}
+        />
         <Route
           exact
           path="/"
@@ -44,7 +46,7 @@ class ApplicationViews extends Component {
           exact
           path="/animals"
           render={props => {
-            if (this.isAuthenticated()) {
+            if (this.props.user) {
               return <AnimalList {...props} />;
             } else {
               return <Redirect to="/login" />;
@@ -127,7 +129,7 @@ class ApplicationViews extends Component {
           exact
           path="/employees"
           render={props => {
-            if (this.isAuthenticated()) {
+            if (this.props.user) {
               return <EmployeeList {...props} />;
             } else {
               return <Redirect to="/login" />;
