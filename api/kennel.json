@@ -1,34 +1,28 @@
 {
   "animals": [
     {
-      "id": 1,
       "name": "Bleu",
-      "breed": "Husky Mix",
-      "employeeId": 2
-    },
-    {
-      "id": 2,
-      "name": "Sookie",
-      "breed": "Husky ",
-      "employeeId": 3
-    },
-    {
-      "id": 3,
-      "name": "Bazinga",
-      "breed": "Pug Mix",
-      "employeeId": 1
-    },
-    {
-      "name": "Buster",
-      "breed": "Blood Hound",
+      "breed": "Husky Mix ",
       "employeeId": 2,
-      "id": 4
+      "id": 1
     },
     {
-      "id": 5,
+      "name": "Ruger",
+      "breed": "German Shepherd",
+      "employeeId": 1,
+      "id": 2
+    },
+    {
+      "name": "Rosco",
+      "breed": "Mini Border Colli",
+      "employeeId": 4,
+      "id": 3
+    },
+    {
       "name": "Raekwon",
       "breed": "Corgi",
-      "employeeId": 3
+      "employeeId": 2,
+      "id": 4
     }
   ],
   "employees": [
@@ -43,12 +37,6 @@
       "name": "Ricky McConnell",
       "position": "Lead Vet",
       "locationId": 3
-    },
-    {
-      "id": 3,
-      "name": "Steve Brownlee",
-      "position": "Vet Assistant",
-      "locationId": 2
     },
     {
       "name": "Deep Patel",

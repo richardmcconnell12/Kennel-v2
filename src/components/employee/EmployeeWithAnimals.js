@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import EmployeeManager from "../../modules/EmployeeManager";
+import AnimalManager from "../../modules/AnimalManager";
 import AnimalCard from "../animal/AnimalCard";
 
 class EmployeeWithAnimals extends Component {
   state = {
     employee: {},
     animals: []
+  };
+
+  deleteAnimal = id => {
+    AnimalManager.delete(id).then(() => {
+      AnimalManager.getAll().then(newAnimals => {
+        this.setState({
+          animals: newAnimals
+        });
+      });
+    });
   };
 
   componentDidMount() {
@@ -25,7 +36,12 @@ class EmployeeWithAnimals extends Component {
       <div className="card">
         <p>Employee: {this.state.employee.name}</p>
         {this.state.animals.map(animal => (
-          <AnimalCard key={animal.id} animal={animal} {...this.props} />
+          <AnimalCard
+            key={animal.id}
+            animal={animal}
+            deleteAnimal={this.deleteAnimal}
+            {...this.props}
+          />
         ))}
       </div>
     );
