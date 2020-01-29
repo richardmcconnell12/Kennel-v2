@@ -82,11 +82,7 @@ class ApplicationViews extends Component {
           exact
           path="/locations"
           render={props => {
-            if (this.isAuthenticated()) {
-              return <LocationList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
+            return <LocationList {...props} />;
           }}
         />
         <Route
@@ -148,11 +144,7 @@ class ApplicationViews extends Component {
           exact
           path="/owners"
           render={props => {
-            if (this.isAuthenticated()) {
-              return <OwnerList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
+            return <OwnerList {...props} />;
           }}
         />
         <Route
