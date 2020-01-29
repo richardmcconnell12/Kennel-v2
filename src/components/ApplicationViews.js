@@ -129,11 +129,7 @@ class ApplicationViews extends Component {
           exact
           path="/employees"
           render={props => {
-            if (this.props.user) {
-              return <EmployeeList {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
+            return <EmployeeList {...props} />;
           }}
         />
         <Route

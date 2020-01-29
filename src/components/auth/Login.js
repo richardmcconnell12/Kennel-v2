@@ -20,7 +20,7 @@ class Login extends Component {
         For now, just store the email and password that
         the customer enters into local storage.
     */
-    localStorage.setItem(
+    sessionStorage.setItem(
       "credentials",
       JSON.stringify({
         email: this.state.email,
