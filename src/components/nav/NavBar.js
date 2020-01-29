@@ -12,7 +12,7 @@ class NavBar extends Component {
     return (
       <header>
         <h1 className="site-title">
-          Student Kennels
+          Furever Friends
           <br />
           <small>Loving care when you're not there.</small>
         </h1>
@@ -30,7 +30,11 @@ class NavBar extends Component {
                 </Link>
               </li>
             ) : null}
-            <li>Locations</li>
+            <li>
+              <Link className="nav-link" to="/locations">
+                Locations
+              </Link>
+            </li>
             {this.props.user ? (
               <>
                 <li>
@@ -38,11 +42,15 @@ class NavBar extends Component {
                     Employees
                   </Link>
                 </li>
-                <li>Owners</li>
                 <li>
-                  <span className="nav-link" onClick={this.handleLogout}>
+                  <Link className="nav-link" to="/owners">
+                    Owners
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" onClick={this.handleLogout}>
                     Logout
-                  </span>
+                  </Link>
                 </li>
               </>
             ) : (
